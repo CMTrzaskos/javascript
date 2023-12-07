@@ -19,7 +19,13 @@ section{
     margin: auto;
     padding: 10px;
 }
-
+img{
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
 div{
     text-align: center;
 }
