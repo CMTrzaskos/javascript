@@ -1,6 +1,6 @@
 function carregar(){
     var data = new Date()
-    var hora = 19//data.getHours()
+    var hora = data.getHours()
     var msg = document.getElementById('msg')
     var img = document.getElementById('imagem')
     msg.innerHTML = `Agora são ${hora} horas.`
@@ -11,7 +11,7 @@ function carregar(){
         
     } else if(hora >=12 && hora <=18){
         img.src = 'imagens/pexels-george-desipris-858241.jpg'
-        document.body.style.background ='orange'
+        document.body.style.background ='#8a28dbe3'
         msg.innerHTML +=(' Boa tarde!')
     } else {
         img.src = 'imagens/pexels-piccinng-3052361.jpg'

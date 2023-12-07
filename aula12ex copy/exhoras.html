@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Exercício</title>
+    <title>Qual sua idade?</title>
 </head>
 <body onload="carregar()">
     <header>
-        <h1>Que horas são ?</h1>
+        <h1>Qual sua idade?</h1>
     </header>
     <section>
-        <div id="msg">
-            mensagem
+        <div>
+            <form>
+                <p>Ano de nascimento: 
+                    <label for="txtano"></label>
+                    <input type="number" name="txtano" id="txtano" min="0">
+                </p>
+                <p>Sexo:
+                    <input type="radio" name="radsex" id="mas">
+                    <label for="mas">Masculino.</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino.</label>
+                </p>
+                <p><!--<Verificar:>-->
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+            </form>
         </div>
-        <div id="foto">
-            <img id="imagem" src="imagens/pexels-ravi-kant-14888670.jpg" alt="">
+        <div id="res">
+            <p>Por favor preencha todos os campos!</p>
         </div>
     </section>
     <footer>
