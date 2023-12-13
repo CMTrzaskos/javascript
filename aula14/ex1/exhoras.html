@@ -8,30 +8,30 @@
 </head>
 <body>
     <header>
-        <h1>Contador</h1>
+        <h1>Contador de passos!</h1>
     </header>
     <section>
-        <div>
+        <div id="dados">
            <form action="">
             <p>
-                <label for="n1">Começa em:</label>
-                <input type="number" name="n1" id="n1">
+                <label for="inicio">Começa:</label>
+                <input type="number" name="inicio" id="txti">
             </p>
             <p>
-                <label for="n2">De quanto em quanto:</label>
-                <input type="number" name="n2" id="n2">
+                <label for="fim">Termina:</label>
+                <input type="number" name="fim" id="txtf">
             </p>
             <p>
-                <label for="n3">Termina em:</label>
-                <input type="number" name="n3" id="n3">
+                <label for="passo">Passos:</label>
+                <input type="number" name="passo" id="txtp">
             </p>
             <p>
-                <input type="button" value="Verificar" onclick="Verificar()">
+                <input type="button" value="Contar" onclick="contar()">
             </p>
            </form>
         </div>
-        <div>
-            resposta...
+        <div id="res">
+            
         </div>
     </section>
     <footer>

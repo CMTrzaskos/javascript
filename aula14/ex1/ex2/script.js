@@ -1,21 +1,17 @@
-function carregar(){
-    var data = new Date()
-    var hora = data.getHours()
-    var msg = document.getElementById('msg')
-    var img = document.getElementById('imagem')
-    msg.innerHTML = `Agora são ${hora} horas.`
-
-    if( hora >= 0 && hora < 12){
-        img.src='imagens/pexels-ravi-kant-14888670.jpg'
-        msg.innerHTML +=(' Bom dia!')
-        
-    } else if(hora >=12 && hora <=18){
-        img.src = 'imagens/pexels-george-desipris-858241.jpg'
-        document.body.style.background ='#8a28dbe3'
-        msg.innerHTML +=(' Boa tarde!')
-    } else {
-        img.src = 'imagens/pexels-piccinng-3052361.jpg'
-        document.body.style.background ='gray'
-        msg.innerHTML +=(' Boa noite!')
+function tabuada(){
+   let num = document.getElementById('txtn')
+   let tab = document.getElementById('seltab')
+   if (num.value.length == 0){
+    alert('Por favor, digite um número!')
+   }else{
+    let n = Number(num.value)
+    let c =1
+    tab.innerHTML = ''
+    while (c <= 10){
+        let item = document.createElement('option')
+        item.text = `${n} X ${c} = ${n*c}`
+        tab.appendChild(item)
+        c++
     }
+   }
 }
