@@ -107,5 +107,96 @@
             <button onclick="confirmarPedido()">Confirmar Pedido</button>
             <button onclick="cancelarPedido()">Cancelar Pedido</button>
         </div>
+
+        <script>
+            let carrinho = [];
+
+                function adicionarAoCarrinho(name, price, quantity) {
+                    carrinho.push({ name, price, quantity });
+                    carrinhoAtualizado();
+                }
+
+                function carrinhoAtualizado() {
+            const carrinhoItensDiv = document.getElementById('carrinho-itens');
+            carrinhoItensDiv.innerHTML = '';
+            let total = 0;
+            carrinho.forEach(item => {
+                carrinhoItensDiv.innerHTML += `<div class="cart-item">${item.name} - Quantidade: ${item.quantity} - R$${(item.price * item.quantity).toFixed(2)}</div>`;
+                total += item.price * item.quantity;
+            });
+            document.getElementById('carrinho-total').innerText = total.toFixed(2);
+            }
+
+
+            function removerDoCarrinho(name) {
+                carrinho = carrinho.filter(item => item.name !== name);
+                carrinhoAtualizado();
+            }
+
+            function finalizarPedido() {
+                if (carrinho.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+                document.getElementById('pedidos').innerHTML = document.getElementById('carrinho-itens').innerHTML + `<p>Total: R$${document.getElementById('carrinho-total').innerText}</p>`;
+                document.getElementById('checkout').style.display = 'block';
+            }
+
+            function confirmarPedido() {
+            const nome = document.getElementById('nome').value;
+            const entrega = document.getElementById('entrega').value;
+            const pagamento = document.getElementById('pagamento').value;
+
+            if (!nome || !entrega) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            alert(`Pedido confirmado!\nNome: ${nome}\nEndereço: ${entrega}\nPagamento: ${pagamento}\n${document.getElementById('pedidos').innerText}`);
+            limparCarrinho();
+            document.getElementById('checkout').style.display = 'none';
+        }
+
+        function cancelarPedido() {
+            if (confirm('Tem certeza de que deseja cancelar o pedido?')) {
+                document.getElementById('checkout').style.display = 'none';
+            }
+        }
+
+        function limparCarrinho() {
+            carrinho = [];
+            carrinhoAtualizado();
+            document.getElementById('checkout').style.display = 'none';
+        }
+
+        document.querySelectorAll('.item-menu input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const quantityInput = document.getElementById(`qty-${this.id}`);
+                const name = this.dataset.name;
+                const price = parseFloat(this.dataset.price);
+                const quantity = parseInt(quantityInput.value);
+
+                if (this.checked) {
+                    adicionarAoCarrinho(name, price, quantity);
+                } else {
+                    removerDoCarrinho(name);
+                }
+            });
+        })
+
+        document.querySelectorAll('.item-menu input[type="number"]').forEach(input => {
+            input.addEventListener('change', function () {
+                const checkbox = this.parentElement.querySelector('input[type="checkbox"]');
+                if (checkbox.checked) {
+                    const name = checkbox.dataset.name;
+                    const price = parseFloat(checkbox.dataset.price);
+                    const quantity = parseInt(this.value);
+                    removerDoCarrinho(name);
+                    adicionarAoCarrinho(name, price, quantity);
+                }
+            });
+        });
+        </script>
+        <script src="script.js"></script>
 </body>
 </html>
