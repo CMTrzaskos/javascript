@@ -7,106 +7,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cardápio</h1>
-
-        <div class="categoria-menu">
-            <h2>Doces</h2><br>
+    <header><h1>Três Primos Food</h1></header>
+    <main>
+        <h2>Cardápio</h2>
+            <div class="categoria-menu">
+                <h2>Doces</h2><br>
+                    <div class="item-menu">
+                        <input type="checkbox" name="doce1" id="doce1" data-name="Brigadeiro" data-price="12.00">
+                        <img src="midias/pexels-gustavoraton-6441136 (1).jpg">
+                        <label for="doce1">Brigadeiro - R$12,00</label>
+                        <input type="number" id="qty-doce1" value="1" min="0" style="width: 40px;">
+                    </div>
+                <br>
                 <div class="item-menu">
-                    <input type="checkbox" name="doce1" id="doce1" data-name="Brigadeiro" data-price="12.00">
-                    <img src="midias/pexels-gustavoraton-6441136 (1).jpg">
-                    <label for="doce1">Brigadeiro - R$12,00</label>
-                    <input type="number" id="qty-doce1" value="1" min="0" style="width: 40px;">
+                    <input type="checkbox" name="doce2" id="doce2" data-name="Churros" data-price="18.00">
+                    <img src="midias/pexels-caramelle-gastronomia-2942667-4529015.jpg" alt="">
+                    <label for="doce2">Churros - R$18,00</label>
+                    <input type="number" id="qty-doce2" value="1" min="0" style="width: 40px;">
                 </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="doce2" id="doce2" data-name="Churros" data-price="18.00">
-                <img src="midias/pexels-caramelle-gastronomia-2942667-4529015.jpg" alt="">
-                <label for="doce2">Churros - R$18,00</label>
-                <input type="number" id="qty-doce2" value="1" min="0" style="width: 40px;">
-            </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="doce3" id="doce3" data-name="Torta" data-price="10.00">
-                <img src="midias/pexels-gustavoraton-9501464.jpg" alt="">
-                <label for="doce3">Torta de Limão (fatia) - R$10,00</label>
-                <input type="number" id="qty-doce3" value="1" min="0" style="width: 40px;">
-            </div>
-        </div>
-
-        <div class="categoria-menu">
-            <h2>Salgados</h2><br>
+                <br>
                 <div class="item-menu">
-                    <input type="checkbox" name="saldao1" id="salgado1" data-name="Coxinha" data-price="10.00">
-                    
-                    <label for="salgado1">Coxinha - R$10,00</label>
-                    <input type="number" id="qty-salgado1" value="1" min="0" style="width: 40px;">
+                    <input type="checkbox" name="doce3" id="doce3" data-name="Torta" data-price="10.00">
+                    <img src="midias/pexels-gustavoraton-9501464.jpg" alt="">
+                    <label for="doce3">Torta de Limão (fatia) - R$10,00</label>
+                    <input type="number" id="qty-doce3" value="1" min="0" style="width: 40px;">
                 </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="salgado" id="salgado2" data-name="Pastel" data-price="14.00">
-
-                <label for="salgado2">Pastel - R$14,00</label>
-                <input type="number" id="qty-salgado2" value="1" min="0" style="width: 40px;">
             </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="salgado3" id="salgado3" data-name="Kibe" data-price="10.00">
-
-                <label for="salgado3">Kibe - R$10,00</label>
-                <input type="number" id="qty-salgado3" value="1" min="0" style="width: 40px;">
-            </div>
-        </div>
-
-        <div class="categoria-menu">
-            <h2>Bebidas</h2><br>
+            <div class="categoria-menu">
+                <h2>Salgados</h2><br>
+                    <div class="item-menu">
+                        <input type="checkbox" name="saldao1" id="salgado1" data-name="Coxinha" data-price="10.00">
+        
+                        <label for="salgado1">Coxinha - R$10,00</label>
+                        <input type="number" id="qty-salgado1" value="1" min="0" style="width: 40px;">
+                    </div>
+                <br>
                 <div class="item-menu">
-                    <input type="checkbox" name="bebidas1" id="bebidas1" data-name="Refrigerante" data-price="7.00">
-                    
-                    <label for="bebidas1">Refrigerante (Lata) - R$7,00</label>
-                    <input type="number" id="qty-bebidas1" value="1" min="0" style="width: 40px;">
+                    <input type="checkbox" name="salgado" id="salgado2" data-name="Pastel" data-price="14.00">
+                    <label for="salgado2">Pastel - R$14,00</label>
+                    <input type="number" id="qty-salgado2" value="1" min="0" style="width: 40px;">
                 </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="bebidas2" id="bebidas2" data-name="Chopp" data-price="15.00">
-                
-                <label for="bebidas2">Chopp (1L)- R$15,00</label>
-                <input type="number" id="qty-bebidas2" value="1" min="0" style="width: 40px;">
+                <br>
+                <div class="item-menu">
+                    <input type="checkbox" name="salgado3" id="salgado3" data-name="Kibe" data-price="10.00">
+                    <label for="salgado3">Kibe - R$10,00</label>
+                    <input type="number" id="qty-salgado3" value="1" min="0" style="width: 40px;">
+                </div>
             </div>
-            <br>
-            <div class="item-menu">
-                <input type="checkbox" name="bebidas3" id="bebidas3" data-name="Suco" data-price="5.00">
-                
-                <label for="bebidas3">Suco (copo-200ml)- R$5,00</label>
-                <input type="number" id="qty-bebidas3" value="1" min="0" style="width: 40px;">
+            <div class="categoria-menu">
+                <h2>Bebidas</h2><br>
+                    <div class="item-menu">
+                        <input type="checkbox" name="bebidas1" id="bebidas1" data-name="Refrigerante" data-price="7.00">
+        
+                        <label for="bebidas1">Refrigerante (Lata) - R$7,00</label>
+                        <input type="number" id="qty-bebidas1" value="1" min="0" style="width: 40px;">
+                    </div>
+                <br>
+                <div class="item-menu">
+                    <input type="checkbox" name="bebidas2" id="bebidas2" data-name="Chopp" data-price="15.00">
+        
+                    <label for="bebidas2">Chopp (1L)- R$15,00</label>
+                    <input type="number" id="qty-bebidas2" value="1" min="0" style="width: 40px;">
+                </div>
+                <br>
+                <div class="item-menu">
+                    <input type="checkbox" name="bebidas3" id="bebidas3" data-name="Suco" data-price="5.00">
+        
+                    <label for="bebidas3">Suco (copo-200ml)- R$5,00</label>
+                    <input type="number" id="qty-bebidas3" value="1" min="0" style="width: 40px;">
+                </div>
             </div>
-        </div>
-
-        <div class="carrinho">
-            <h2>Carrinho de Compras</h2>
-            <div id="carrinho-itens"></div>
-            <p>Total: R$<span id="carrinho-total">0.00</span></p>
-            <button onclick="finalizarPedido()">Finalizar Pedido</button>
-        </div>
-
-        <div class="checkout" id="checkout">
-            <h2>Finalizar Pedido</h2>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" required>
-    
-            <label for="entrega">Endereço de Entrega:</label>
-            <input type="text" id="entrega" required>
-    
-            <label for="pagamento">Forma de Pagamento:</label>
-            <select id="pagamento">
-                <option value="cartao">Cartão (Débito/Crédito)</option>
-                <option value="pix">Pix</option>
-            </select>
-    
-            <h3>Resumo do Pedido</h3>
-            <div id="pedidos"></div>
-            <button onclick="confirmarPedido()">Confirmar Pedido</button>
-            <button onclick="cancelarPedido()">Cancelar Pedido</button>
-        </div>
+            <div class="carrinho">
+                <h2>Carrinho de Compras</h2>
+                <div id="carrinho-itens"></div>
+                <p>Total: R$<span id="carrinho-total">0.00</span></p>
+                <button onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+            <div class="checkout" id="checkout">
+                <h2>Finalizar Pedido</h2>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" required>
+        
+                <label for="entrega">Endereço de Entrega:</label>
+                <input type="text" id="entrega" required>
+        
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento">
+                    <option value="cartao">Cartão (Débito/Crédito)</option>
+                    <option value="pix">Pix</option>
+                </select>
+        
+                <h3>Resumo do Pedido</h3>
+                <div id="pedidos"></div>
+                <button onclick="confirmarPedido()">Confirmar Pedido</button>
+                <button onclick="cancelarPedido()">Cancelar Pedido</button>
+            </div>
+    </main>
 
         <script>
             let carrinho = [];
