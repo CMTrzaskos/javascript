@@ -26,7 +26,7 @@ header{
    
 }
 main{
-    text-align: justify;
+    
     font-family: "Sriracha", system-ui;
     margin: auto;
     display: block;
@@ -120,4 +120,12 @@ div#carrinho-itens{
 option{
     height: 20;
     width: 100px;
+}
+footer{
+    
+    background-color: #e91315;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
 }
