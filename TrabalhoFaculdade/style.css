@@ -26,6 +26,7 @@ header{
    
 }
 main{
+    text-align: justify;
     font-family: "Sriracha", system-ui;
     margin: auto;
     display: block;
